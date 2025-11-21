@@ -8,7 +8,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "frontend" {
-  ami                    = data.aws_ami.ubuntu.id
+  ami                    = "ami-0abcdef1234567890"
   instance_type          = "t3.nano"  # 1 vCPU, 0.5GB; if you need strictly 1GB use t3.micro
   key_name               = var.key_pair_name
   subnet_id              = aws_subnet.public.id
@@ -25,7 +25,7 @@ resource "aws_instance" "frontend" {
 }
 
 resource "aws_instance" "backend" {
-  ami                    = data.aws_ami.ubuntu.id
+  ami                    = "ami-0abcdef1234567890"
   instance_type          = "t3.micro"  # 1 vCPU 1GB
   key_name               = var.key_pair_name
   subnet_id              = aws_subnet.public.id
