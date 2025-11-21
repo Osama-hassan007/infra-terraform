@@ -3,9 +3,10 @@ variable "aws_region" {
   default = "eu-west-1"   # change to desired region
 }
 
+
 variable "availability_zone" {
   type    = string
-  default = "${var.aws_region}a"
+  default = "eu-central-1a"
 }
 
 variable "key_pair_name" {
