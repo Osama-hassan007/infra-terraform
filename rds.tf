@@ -12,7 +12,7 @@ resource "aws_rds_cluster_instance" "aurora_mysql_instance" {
   count               = 1
   identifier          = "aurora-mysql-instance-${count.index}"
   cluster_identifier  = aws_rds_cluster.aurora_mysql.id
-  instance_class      = "db.t4g.small"
+  instance_class      = "db.t3.medium"   # <-- updated to a supported instance
   engine              = aws_rds_cluster.aurora_mysql.engine
   publicly_accessible = false
 }
