@@ -32,6 +32,6 @@ services:
       - "3001:3001"
 EOF
 
-# Start Uptime Kuma with Docker Compose
+# Start Uptime Kuma with Docker Compose (use the plugin version of docker-compose)
 cd /opt/uptime-kuma || exit
-docker-compose up -d
+docker compose up -d
