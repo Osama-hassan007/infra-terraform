@@ -9,15 +9,16 @@ resource "aws_rds_cluster" "aurora_mysql" {
 }
 
 resource "aws_rds_cluster_instance" "aurora_mysql_instance" {
-  count              = 1
-  identifier         = "aurora-mysql-instance-${count.index}"
-  cluster_identifier = aws_rds_cluster.aurora_mysql.id
-  instance_class     = "db.t3.small"  # cheapest supported instance
-  engine             = aws_rds_cluster.aurora_mysql.engine
+  count               = 1
+  identifier          = "aurora-mysql-instance-${count.index}"
+  cluster_identifier  = aws_rds_cluster.aurora_mysql.id
+  instance_class      = "db.t3.small"
+  engine              = aws_rds_cluster.aurora_mysql.engine
   publicly_accessible = false
 }
 
 resource "random_password" "db_password" {
-  length  = 16
-  special = true
+  length           = 16
+  special          = true
+  override_special = "!#$%&()*+,-.:;<=>?[]^_{|}~"
 }
