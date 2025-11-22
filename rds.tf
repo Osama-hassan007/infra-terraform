@@ -16,3 +16,8 @@ resource "aws_rds_cluster_instance" "aurora_mysql_instance" {
   engine             = aws_rds_cluster.aurora_mysql.engine
   publicly_accessible = false
 }
+
+resource "random_password" "db_password" {
+  length  = 16
+  special = true
+}
