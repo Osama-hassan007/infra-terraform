@@ -5,7 +5,7 @@ resource "aws_sns_topic" "cpu_alerts" {
 resource "aws_sns_topic_subscription" "email_subscription" {
   topic_arn = aws_sns_topic.cpu_alerts.arn
   protocol  = "email"
-  endpoint  = "youremail@example.com"  # replace with your email
+  endpoint  = "mosama653@gmail.com"  # replace with your email
 }
 
 resource "aws_cloudwatch_metric_alarm" "frontend_cpu" {

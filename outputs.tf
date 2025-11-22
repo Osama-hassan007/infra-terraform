@@ -7,11 +7,11 @@ output "backend_public_ip" {
 }
 
 output "rds_endpoint" {
-  value = aws_db_instance.mysql.address
+  value = aws_rds_cluster.aurora_mysql.endpoint
 }
 
 output "db_username" {
-  value = aws_db_instance.mysql.username
+  value = aws_rds_cluster.aurora_mysql.master_username
 }
 
 output "db_password" {
