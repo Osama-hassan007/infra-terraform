@@ -1,7 +1,7 @@
 resource "aws_rds_cluster" "aurora_mysql" {
   cluster_identifier      = "aurora-mysql-cluster"
   engine                  = "aurora-mysql"
-  engine_version          = "8.0.mysql_aurora.3.07.1"
+  engine_version          = "8.0.mysql_aurora.3.04.0"
   master_username         = "admin"
   master_password         = random_password.db_password.result
   backup_retention_period = 5
