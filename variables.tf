@@ -23,4 +23,5 @@ variable "ssh_public_key" {
 variable "email_alert" {
   description = "Email to receive CPU alerts (SNS subscription)"
   type = string
+  default = "50"
 }

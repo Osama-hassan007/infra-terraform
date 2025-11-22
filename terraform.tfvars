@@ -1,1 +1,1 @@
-key_pair_name = "osos-key"
+key_pair_name = "osos"
